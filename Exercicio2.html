@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ </head>
+  <body>
+    <form class="" name="formIVA" method="post">
+    	<h2><b>CÁLCULO IVA</b></h2><br>
+        <b>CUSTO DO PRODUTO</b> <br> <input type="text" name="CustoProd" value=""><br><br>
+        Taxa IVA <br>
+        <select class="" name="taxa">
+          <option value="23">23%</option>
+          <option value="15">15%</option>
+          <option value="10">10%</option>
+        </select>
+        <br><br> Taxa IVA <br>
+        <input type="text" name="valor" value=""><br><br>
+
+        <button type="button" onclick="iva();">Calcular</button>
+        <button type="reset">Limpar</button><br>
+    </form>
+
+    <script type="text/javascript">
+    function iva(){
+      var prod = Number(document.formIVA.CustoProd.value);
+      var taxa= Number(document.formIVA.taxa.value);
+      calc = prod * (taxa/100)
+      document.formIVA.valor.value= calc;
+    }
+  </script>
+</body>
+</html>
